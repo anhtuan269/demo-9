@@ -19,7 +19,7 @@
         text-align: center;
     }
     .new .container .info .owl-theme .owl-dots {
-        display: none;
+        display: none!important;
     }
     .new .container .info .owl-theme .owl-nav .owl-prev {
         position: absolute;
