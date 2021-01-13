@@ -409,7 +409,7 @@
                         li
                             a(href="#" title="Compare")
                                 i.fas.fa-sliders-h
-        #grid-product.grid-product.hide            
+        #grid-product.grid-product.hiden           
             .single-product
                 .image
                     figure
@@ -506,6 +506,19 @@
                             li
                                 a(href="#")
                                     i.fas.fa-eye
+                    .countdown
+                        .single-count
+                            span.count 00
+                            p Days
+                        .single-count
+                            span.count 00
+                            p Hour
+                        .single-count
+                            span.count 00
+                            p Min
+                        .single-count
+                            span.count 00
+                            p Sec
                 .product-content
                     .vote
                         ul
@@ -529,7 +542,7 @@
                 .image
                     figure
                         img(src="./image/product-4.jpg", alt="")
-                    
+                    span.discount -40%
                     .icon
                         ul
                             li
@@ -784,12 +797,12 @@ script.
     $('#grid').click(function(){
         $('#grid').addClass('active')
         $('#list').removeClass('active');
-        $('#grid-product').removeClass('hide');
-        $('#list-product').addClass('hide');
+        $('#grid-product').removeClass('hiden');
+        $('#list-product').addClass('hiden');
     })
      $('#list').click(function(){
         $('#list').addClass('active')
         $('#grid').removeClass('active');
-         $('#grid-product').addClass('hide');
-        $('#list-product').removeClass('hide');
+         $('#grid-product').addClass('hiden');
+        $('#list-product').removeClass('hiden');
     })
