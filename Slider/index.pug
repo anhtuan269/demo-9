@@ -1,0 +1,39 @@
+.slider 
+    .slide.owl-carousel.owl-theme
+        .single-slider.slide-1
+            .container
+                .content
+                    h5
+                        | 20% Off For 
+                        br
+                        |  New Members
+                    h2 Your Special Day!
+                    p We are here for you Special day
+                    .button
+                        a.btn(href="#") Start Shopping
+        .single-slider.slide-2
+            .container
+                .content
+                    h5
+                        | 20% Off For 
+                        br
+                        |  New Members
+                    h2 Your Special Day!
+                    p We are here for you Special day
+                    .button
+                        a.btn(href="#") Start Shopping
+script.
+     $(document).ready(function(){
+        $('.slide').owlCarousel({
+            nav:false,
+            loop: true,
+            responsive: {
+                1000: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+            }
+        })
+    })

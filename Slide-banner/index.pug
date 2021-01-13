@@ -1,0 +1,34 @@
+.banner.pd6
+    .container
+        .testimonial.owl-carousel.owl-theme
+            .banner-content
+                p Felis eu pede mollis pretium. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus lingua. felis eu pede mollis pretium.
+                .testimonial-author
+                    img(src="./image/testimonial-img-1.png", alt="")
+                    span Torvi / COO
+            .banner-content
+                p Felis eu pede mollis pretium. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus lingua. felis eu pede mollis pretium.
+                .testimonial-author
+                    img(src="./image/testimonial-img-2.png", alt="")
+                    span Torvi / COO
+script.
+     $(document).ready(function(){
+        $('.testimonial').owlCarousel({
+            nav: true,
+            loop: true,
+            responsive: {
+                1000: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+            }
+        })
+    })
