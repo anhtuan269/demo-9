@@ -26,7 +26,7 @@
         color: #222222;
         font-size: 14px;
     }
-    .link .container .row .link-area ol li:last-child::before {
+    .link .container .row .link-area ol li:not(:first-child)::before {
         padding-right: 0.5rem;
         content:'/';
         color: #222;
