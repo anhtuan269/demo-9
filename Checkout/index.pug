@@ -188,33 +188,70 @@
                     h3 YOUR ORDER
                     .your-order
                         .your-order-info
-                            .info.order
-                                ul
-                                    li
-                                        | Product
-                                        span Total
-                            .midle.order
-                                ul
-                                    li
-                                        | Product Name X 1
-                                        span £150.00
-                                    li
-                                        | Product Name X 1
-                                        span £150.00
-                            .order-subtotal.order
-                                ul
-                                    li
-                                        | Product Name X 1
-                                        span £150.00                            
-                            .order-total.order
-                                ul
-                                    li
-                                        | Total
-                                        span £600.00
+                            table 
+                                thead
+                                    tr 
+                                        th.product-name Product
+                                        th.product-price Total
+                                tbody
+                                    tr
+                                        td.product-name
+                                            p Bodysuit With Long Sleeves × 1
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p Classic Polo Shirt × 1
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p Trouers With Side Dtripe × 1
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p Biker Jacket × 1
+                                        td.product-price
+                                            p £150.00
+                                tfoot
+                                    tr
+                                        td.product-name
+                                            p Subtotal 
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p.shipping Shipping
+                                        td.product-price
+                                            ul.shipping-list
+                                                li.cus-radio
+                                                    input(type="radio")#radio1
+                                                    label.checked#radio-1(for="radio1")
+                                                        span
+                                                        | Flat Rate
+                                                li.cus-radio
+                                                    input(type="radio")#radio2
+                                                    label#radio-2(for="radio2")
+                                                        span
+                                                        | Free Shipping
+                                                li.cus-radio
+                                                    input(type="radio")#radio3
+                                                    label#radio-3(for="radio3")
+                                                        span
+                                                        | Local Pickup
+                                    tr
+                                        td.product-name 
+                                            p Total
+                                        td.product-price 
+                                            p £600.00 
+
+
+
                         .order-method
                             .payment
                                 input(type="radio" value="cheque" ).input-ridio
-                                label.checked#radio-1
+                                label.checked#radio-4
                                     span
                                     |Direct Bank Transfer 
                                     
@@ -222,18 +259,18 @@
                                     p Make your payment directly into our bank account. Please use your Order ID as the payment reference.
                             .payment
                                 input(type="radio" value="cheque" ).input-ridio
-                                label#radio-2(for="#")
+                                label#radio-5(for="#")
                                     span
                                     | Check Payment
                                     
                             .payment
                                 input(type="radio" value="cheque" ).input-ridio
-                                label#radio-3(for="#")
+                                label#radio-6(for="#")
                                     span
                                     |Cash On Delivery 
                             .payment
                                 input(type="radio" value="cheque").input-ridio
-                                label#radio-4
+                                label#radio-7
                                     span
                                     | Paypal
                                     img(src="./image/payment-checkout.png", alt="")
@@ -256,23 +293,38 @@ script.
         $('#radio-1').addClass('checked');
         $('#radio-2').removeClass('checked');
         $('#radio-3').removeClass('checked');
-        $('#radio-4').removeClass('checked');
     })
     $('#radio-2').click(function(){
         $('#radio-2').addClass('checked');
         $('#radio-1').removeClass('checked');
         $('#radio-3').removeClass('checked');
-        $('#radio-4').removeClass('checked');
     })
     $('#radio-4').click(function(){
         $('#radio-4').addClass('checked');
-        $('#radio-2').removeClass('checked');
-        $('#radio-1').removeClass('checked');
-        $('#radio-3').removeClass('checked');
+        $('#radio-5').removeClass('checked');
+        $('#radio-6').removeClass('checked');
+        $('#radio-7').removeClass('checked');
     })
      $('#radio-3').click(function(){
         $('#radio-3').addClass('checked');
         $('#radio-2').removeClass('checked');
         $('#radio-1').removeClass('checked');
+    })
+    $('#radio-5').click(function(){
+        $('#radio-5').addClass('checked');
         $('#radio-4').removeClass('checked');
+        $('#radio-6').removeClass('checked');
+        $('#radio-7').removeClass('checked');
+    })
+     $('#radio-6').click(function(){
+        $('#radio-6').addClass('checked');
+        $('#radio-4').removeClass('checked');
+        $('#radio-5').removeClass('checked');
+        $('#radio-7').removeClass('checked');
+    })
+     $('#radio-7').click(function(){
+        $('#radio-7').addClass('checked');
+        $('#radio-4').removeClass('checked');
+        $('#radio-6').removeClass('checked');
+        $('#radio-5').removeClass('checked');
     })

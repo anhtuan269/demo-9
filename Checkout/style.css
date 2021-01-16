@@ -238,13 +238,124 @@
         width: 100%;
     }
     .checkout .container .checkout-wrap .col-5 .order-area {
-        padding: 40px 12px 50px;
+        padding: 40px;
         margin-top: 30px;
         position: relative;
-        border: 2px solid rgba(52,53,56,0.1)
+        border: 2px solid #e1e1e1;
     }
-    .checkout .container .checkout-wrap .col-5 .order-area .your-order .order {
-        border-bottom: 1px solid #e8e8e8;
+    table>:not(:last-child)>:last-child>* {
+        border-bottom-color: currentColor;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table {
+        width: 100%;
+        color: #212529;
+        vertical-align: top;
+        border-color: #dee2e6;
+        --bs-table-bg: transparent;
+        --bs-table-accent-bg: transparent;
+        --bs-table-striped-color: #212529;
+        --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+        --bs-table-active-color: #212529;
+        --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+        --bs-table-hover-color: #212529;
+        --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table thead tr th  {
+        padding: 10px 0;
+        border-top: 0;
+        border-bottom: 1px solid #212529;
+        font-weight: 400;
+        font-size: 14px;
+        color: #000000;
+        vertical-align: middle;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table thead tr th.product-name {
+        text-align: left;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tbody tr:first-child td {
+        padding-top: 20px;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tbody tr:last-child td {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #212529;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tbody tr td {
+        padding: 5px 0;
+        border-top: 0;
+        vertical-align: middle;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td {
+        padding: 10px 0;
+        vertical-align: middle;
+        border-bottom: 1px solid #e1e1e1;
+        position: relative;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td input {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        margin: 0;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td label {
+        display: inline-block;
+        line-height: 23px;
+        position: relative;
+        padding-left: 15px;
+        min-width: 22px;
+        min-height: 22px;
+        cursor: pointer;
+        margin: 0;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td label span {
+        padding-left: 8px;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td label::before {
+        content: "";
+        width: 13px;
+        height: 13px;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        border: 1px solid #222222;
+        -webkit-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td label::after {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 13px;
+        height: 13px;
+        background-color: #222222;
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+        transform: scale(0.5);
+        -webkit-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td label.checked::after {
+        opacity: 1;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tbody tr td p {
+        font-weight: 500;
+        font-size: 14px;
+        color: #000000;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table  tr .product-price {
+        text-align: right;
     }
     .checkout .container .checkout-wrap .col-5 .order-area .your-order .order:not(:first-child){
         padding: 15px 0 10px;
@@ -257,6 +368,17 @@
         margin: 0 0 11px;
         font-weight: 400;
         text-transform: capitalize;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr .shipping {
+        position: absolute;
+        top: 5px;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td ul .cus-radio {
+        display: flex;
+        flex-direction: column;
+    }
+    .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info table tfoot tr td.total-price {
+        font-size: 18px;
     }
     .checkout .container .checkout-wrap .col-5 .order-area .your-order .your-order-info .midle ul li span {
         font-size: 16px;
